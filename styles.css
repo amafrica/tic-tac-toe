@@ -76,6 +76,7 @@ h1 {
 
 .jacky {
   background-image: url("./images/jacky.png");
-  background-size: 100%;
+  background-size: 150%;
+  background-position: center;
 
 }
