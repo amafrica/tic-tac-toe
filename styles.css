@@ -68,3 +68,14 @@ h1 {
   border-color: white;
   float:left;
 }
+
+.stan {
+  background-image: url("./images/stan.png");
+  background-size: 100%;
+}
+
+.jacky {
+  background-image: url("./images/jacky.png");
+  background-size: 100%;
+
+}

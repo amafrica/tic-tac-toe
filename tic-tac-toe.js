@@ -21,33 +21,61 @@
 //   });
 // });
 //
-$(function() {
-  var turn = 0;
+// $(function() {
+//   var turn = 0;
+//
+//   $('.box').on('click', function() {
+//
+//     if ($(this).hasClass('X') || $(this).hasClass('O')) {
+//       alert("Yikes! Wrong move. Try again.");
+//     }
+//     else {
+//       if (turn % 2 === 0) {
+//         $(this).html('X');
+//         $(this).addClass('X');
+//         $('.players-turn').text("Go Second Player!");
+//         noWinner('X');
+//         winCheck('X');
+//         turn++;
+//       }
+//       else {
+//         $(this).html('O');
+//         $(this).addClass('O');
+//         $('.players-turn').text("Your Turn First Player!");
+//         noWinner('O');
+//         winCheck('O');
+//         turn++;
+//       }
+//     }
+//   });
 
-  $('.box').on('click', function() {
 
-    if ($(this).hasClass('X') || $(this).hasClass('O')) {
-      alert("Yikes! Wrong move. Try again.");
-    }
-    else {
-      if (turn % 2 === 0) {
-        $(this).html('X');
-        $(this).addClass('X');
-        $('.players-turn').text("Go Second Player!");
-        noWinner('X');
-        winCheck('X');
-        turn++;
+  $(function() {
+    var turn = 0;
+    var jacky =
+
+    $('.box').on('click', function() {
+
+      if ($(this).hasClass('jacky') || $(this).hasClass('stan')) {
+        alert("Yikes! Wrong move. Try again.");
       }
       else {
-        $(this).html('O');
-        $(this).addClass('O');
-        $('.players-turn').text("Your Turn First Player!");
-        noWinner('O');
-        winCheck('O');
-        turn++;
+        if (turn % 2 === 0) {
+          $(this).addClass('jacky');
+          $('.players-turn').text("Go Second Player!");
+          noWinner('.jacky');
+          winCheck('jacky');
+          turn++;
+        }
+        else {
+          $(this).addClass('stan');
+          $('.players-turn').text("Your Turn First Player!");
+          noWinner('.stan');
+          winCheck('stan');
+          turn++;
+        }
       }
-    }
-  });
+    });
 
 // var winConditions = [['.1', '.2', '.3'], ['.4', '.5', '.6'], ['.7', '.8', '.9'], ['.1', '.4', '.7'],
 // ['.2', '.5', '.8'], ['.3', '.6', '.9'], ['.1', '.5', '.9'], ['.3', '.5', '.7']];
@@ -91,24 +119,45 @@ $(function() {
     }
   }
 
+  //
+  // function noWinner() {
+  //   if (($('#1').hasClass('X') || $('#1').hasClass('O')) && ($('#2').hasClass('X') || $('#2').hasClass('O'))
+  //    && ($('#3').hasClass('X') || $('#3').hasClass('O')) && ($('#4').hasClass('X') || $('#4').hasClass('O'))
+  //    && ($('#5').hasClass('X') || $('#5').hasClass('O')) && ($('#6').hasClass('X') || $('#6').hasClass('O'))
+  //    && ($('#7').hasClass('X') || $('#7').hasClass('O')) && ($('#8').hasClass('X') || $('#8').hasClass('O'))
+  //    && ($('#9').hasClass('X') || $('#9').hasClass('O'))) {
+  //     $('.game-result').fadeIn('start');
+  //     $('.players-turn').text("Looks like we have a tie! We need a winner! Play again!");
+  //   }
+  // }
+
   function noWinner() {
-    if (($('#1').hasClass('X') || $('#1').hasClass('O')) && ($('#2').hasClass('X') || $('#2').hasClass('O'))
-     && ($('#3').hasClass('X') || $('#3').hasClass('O')) && ($('#4').hasClass('X') || $('#4').hasClass('O'))
-     && ($('#5').hasClass('X') || $('#5').hasClass('O')) && ($('#6').hasClass('X') || $('#6').hasClass('O'))
-     && ($('#7').hasClass('X') || $('#7').hasClass('O')) && ($('#8').hasClass('X') || $('#8').hasClass('O'))
-     && ($('#9').hasClass('X') || $('#9').hasClass('O'))) {
+    if (($('#1').hasClass('.jacky') || $('#1').hasClass('.stan')) && ($('#2').hasClass('.jacky') || $('#2').hasClass('.stan'))
+     && ($('#3').hasClass('.jacky') || $('#3').hasClass('.stan')) && ($('#4').hasClass('.jacky') || $('#4').hasClass('.stan'))
+     && ($('#5').hasClass('.jacky') || $('#5').hasClass('.stan')) && ($('#6').hasClass('.jacky') || $('#6').hasClass('.stan'))
+     && ($('#7').hasClass('.jacky') || $('#7').hasClass('.stan')) && ($('#8').hasClass('.jacky') || $('#8').hasClass('.stan'))
+     && ($('#9').hasClass('.jacky') || $('#9').hasClass('.stan'))) {
       $('.game-result').fadeIn('start');
       $('.players-turn').text("Looks like we have a tie! We need a winner! Play again!");
     }
   }
 
+  // $('button').on('click', function resetGame() {
+  //   var turn = 0;
+  //   $('.game-result').fadeOut('start');
+  //   $('.box').removeClass('X');
+  //   $('.box').removeClass('O');
+  //   $('.box').html('');
+  // });
+
   $('button').on('click', function resetGame() {
     var turn = 0;
     $('.game-result').fadeOut('start');
-    $('.box').removeClass('X');
-    $('.box').removeClass('O');
+    $('.box').removeClass('.jacky');
+    $('.box').removeClass('.stan');
     $('.box').html('');
   });
+
 });
 
 //
