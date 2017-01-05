@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Avenir Next" !important;
+  background: mistyrose;
+  color: lightsteelblue;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+h1 {
+  padding: 30px;
+  text-align: center;
+}
+
+.players-turn {
+  text-align: center;
+}
+
+
+.play-again {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  text-align: center;
+  border: none;
+  font-size: 100%;
+  font-weight: bolder;
+}
+
+.play-again:hover {
+  background-color: white;
+}
+
+.table-board {
+  border: 3px solid black;
+  width: 450px;
+  height: 450px;
+  margin: auto;
+  border-color: white;
+  overflow: auto;
+  clear: both;
+}
+
+.top-row, .middle-row, .bottom-row{
+  /*display: inline;*/
+  float: left;
+  height: 33.33333%;
+  width: 100%;
+  overflow: auto;
+  position: relative;
+  /*margin: 0;*/
+}
+
+.box {
+  border: 4px solid black;
+  width: 33.33333%;
+  height: 100%;
+  text-align: center;
+  font-size: 6em;
+  border-color: white;
+  float:left;
+}
